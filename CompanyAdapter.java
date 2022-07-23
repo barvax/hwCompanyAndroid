@@ -49,9 +49,10 @@ public class CompanyAdapter extends RecyclerView.Adapter<CompanyAdapter.companyV
 
 
         holder.companyImage.setOnClickListener(view -> {
-            SessionData sessionData =  SessionData.getInstance();
-            sessionData.setCompany(company);
+//            SessionData sessionData =  SessionData.getInstance();
+//            sessionData.setCompany(company);
             Intent intent = new Intent(context ,AboutActivity.class);
+            intent.putExtra("COMPANY" , company);
             context.startActivity(intent);
         });
 

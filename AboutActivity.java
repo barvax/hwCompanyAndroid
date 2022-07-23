@@ -2,6 +2,7 @@ package com.example.homwworkcompany;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -37,8 +38,10 @@ public class AboutActivity extends AppCompatActivity {
     }
 
     private void setViews() {
-        SessionData sessionData =  SessionData.getInstance();
-        Company company = sessionData.getCompany();
+//        SessionData sessionData =  SessionData.getInstance();
+//        Company company = sessionData.getCompany();
+        Intent intent = getIntent();
+       Company company = (Company) intent.getSerializableExtra("COMPANY");
         companyImage.setImageResource(company.getImageIndex());
         companyYear.setText(company.getCompanyYear());
         aboutText.setText(lorem);

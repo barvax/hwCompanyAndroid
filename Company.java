@@ -1,6 +1,9 @@
 package com.example.homwworkcompany.moduls;
 
-public class Company {
+
+import java.io.Serializable;
+
+public class Company implements Serializable {
     String companyName;
     String companyYear;
     int imageIndex;
